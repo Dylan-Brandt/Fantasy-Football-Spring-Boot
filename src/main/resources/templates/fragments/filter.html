@@ -1,0 +1,16 @@
+<div th:fragment="filter">
+	<div class="filterMenu">
+		<input type="text" id="nameSearch" onkeyup="filterTableByName()" placeholder="Search by name..">
+
+		<form id="positionFilter" th:action="@{/Players}">
+			<select name="pos" id="posSelect" onchange="this.form.submit()">
+				<option value="">Filter by position...</option>
+				<option value="All">All</option>
+				<option value="QB">QB</option>
+				<option value="WR">WR</option>
+				<option value="RB">RB</option>
+				<option value="TE">TE</option>
+			</select>
+		</form>
+	</div>
+</div>

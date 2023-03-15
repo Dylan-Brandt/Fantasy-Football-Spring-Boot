@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #4287f5;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+tr:nth-child(even) td {
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) td {
+	background-color: white;
+}
+
+div.filterMenu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>All Players</title>
+<script src="js/script.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>All Players</h1>
+	<div th:replace="fragments/filter :: filter"></div>
+	<table id="playersTable" data-asc="true">
+		<thead>
+			<tr>
+				<th onclick="sortTable(0)">Name</th>
+				<th onclick="sortTable(1)">Position</th>
+				<th onclick="sortTable(2)">Team</th>
+				<th onclick="sortTable(3)">Passing Yards</th>
+				<th onclick="sortTable(4)">Passing Touchdowns</th>
+				<th onclick="sortTable(5)">Passer Rating</th>
+				<th onclick="sortTable(6)">Rushing Yards</th>
+				<th onclick="sortTable(7)">Rushing Touchdowns</th>
+				<th onclick="sortTable(8)">Receptions</th>
+				<th onclick="sortTable(9)">Receiving Yards</th>
+				<th onclick="sortTable(10)">Receiving Touchdowns</th>
+				<th onclick="sortTable(11)">Fantasy Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="player : ${players}">
+				<td th:text="${player.getName()}"></td>
+				<td th:text="${player.getPos()}"></td>
+				<td th:text="${player.getTeam()}"></td>
+				<td th:text="${player.getPassYds()}"></td>
+				<td th:text="${player.getPassTd()}"></td>
+				<td th:text="${player.getPasserRating()}"></td>
+				<td th:text="${player.getRushYds()}"></td>
+				<td th:text="${player.getRushTd()}"></td>
+				<td th:text="${player.getRec()}"></td>
+				<td th:text="${player.getRecYds()}"></td>
+				<td th:text="${player.getRecTd()}"></td>
+				<td th:text="${player.getFantasyPts()}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
